@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Mr. Khemani ❤️</title>
+
+    <!-- Google Cute Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(180deg, #ff0033, #ff4d6d, #ffb3c6);
+        overflow: hidden;
+        color: white;
+        text-align: center;
+      }
+
+      .page {
+        height: 100vh;
+        width: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+        animation: fadeIn 1.2s ease;
+      }
+
+      .active {
+        display: flex;
+      }
+
+      h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 2.6rem;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.15rem;
+        max-width: 750px;
+        line-height: 1.8;
+        padding: 22px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      button {
+        margin-top: 25px;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        background: white;
+        color: #ff004c;
+        font-size: 1.05rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+      }
+
+      button:hover {
+        transform: scale(1.08);
+        background: #ff004c;
+        color: white;
+      }
+
+      /* Floating Hearts */
+      .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 22px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.8;
+        z-index: 0;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-110vh) translateX(90px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* GIF Styling */
+      .gif {
+        width: 210px;
+        border-radius: 20px;
+        margin: 15px 0;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.35);
+      }
+
+      /* Couple Photo */
+      .photo-box {
+        width: 280px;
+        height: 280px;
+        border-radius: 25px;
+        overflow: hidden;
+        border: 5px solid rgba(255, 255, 255, 0.65);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+        margin-top: 10px;
+      }
+
+      .photo-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Quote */
+      .quote {
+        margin-top: 18px;
+        font-size: 1.3rem;
+        font-style: italic;
+        padding: 18px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.18);
+        max-width: 700px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Proposal Card */
+      .proposal-card {
+        background: rgba(255, 255, 255, 0.18);
+        padding: 28px;
+        border-radius: 28px;
+        max-width: 850px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .proposal-card h2 {
+        font-family: "Pacifico", cursive;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+
+      .proposal-card p {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        font-size: 1.2rem;
+        line-height: 1.8;
+      }
+
+      .final-heart {
+        font-size: 3rem;
+        margin-top: 20px;
+        animation: pulse 1s infinite alternate;
+      }
+
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.25);
+        }
+      }
+
+      .small {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+          padding: 18px;
+          max-width: 90%;
+        }
+
+        .gif {
+          width: 180px;
+        }
+
+        .photo-box {
+          width: 240px;
+          height: 240px;
+        }
+
+        .quote {
+          font-size: 1.1rem;
+          padding: 15px;
+          max-width: 90%;
+        }
+
+        .proposal-card {
+          padding: 22px;
+          max-width: 90%;
+        }
+
+        .proposal-card h2 {
+          font-size: 1.9rem;
+        }
+
+        .proposal-card p {
+          font-size: 1.05rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          padding: 15px;
+        }
+
+        button {
+          padding: 10px 25px;
+          font-size: 0.95rem;
+        }
+
+        .gif {
+          width: 150px;
+        }
+
+        .photo-box {
+          width: 200px;
+          height: 200px;
+        }
+
+        .quote {
+          font-size: 1rem;
+        }
+
+        .proposal-card h2 {
+          font-size: 1.6rem;
+        }
+
+        .proposal-card p {
+          font-size: 0.95rem;
+        }
+
+        .final-heart {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PAGE 1 -->
+    <div class="page active" id="page1">
+      <h1>Welcome to my heart Mr Khemani ❤️</h1>
+
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+        alt="Love gif"
+      />
+
+      <p>
+        Hey my love 🥺💖<br /><br />
+        This is my cute little world made only for you 💕✨ Every heartbeat of
+        mine whispers your name ❤️🌹
+      </p>
+
+      <button onclick="nextPage(2)">Next 💌</button>
+      <div class="small">Swipe into my love story 😘</div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+      <h1>A Message For You 🌈💖</h1>
+
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/l4FGpP4lxGGgK5CBW/giphy.gif"
+        alt="Cute love gif"
+      />
+
+      <p>
+        To someone who came magically into my life and filled it with beautiful
+        colours like rainbow, the way you are it's been a god's grace to have
+        you be with you and love you so much. 💕🌹
+        <br /><br />
+        You make me feel safe, loved and complete 🥹❤️✨
+      </p>
+
+      <button onclick="nextPage(3)">Next 💞</button>
+      <div class="small">Now comes our cute moment 😍</div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+      <h1>Our Love Moment 🥰❤️</h1>
+
+      <div class="photo-box">
+        <img
+          src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80"
+          alt="Couple Photo"
+        />
+      </div>
+
+      <div class="quote">
+        "You are my favourite feeling, my forever person, and my sweetest
+        destiny." 💍❤️🌹
+      </div>
+
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/1BcfiGuO4NQGk/giphy.gif"
+        alt="Love gif"
+      />
+
+      <button onclick="nextPage(4)">Next 💍🌹</button>
+      <div class="small">Hold my hand… something special is waiting 🥺</div>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page4">
+      <h1>My Proposal 💍🌹</h1>
+
+      <div class="proposal-card">
+        <h2>Mr Khemani ❤️</h2>
+
+        <p>
+          With love and gratitude I want to ask and confess… 🥺💕
+          <br /><br />
+          Will you be mine again? ❤️ Will you give me a chance to make you smile
+          again, happy and make you feel special? 🌸✨
+          <br /><br />
+          I want us to have a happy healthy family… 👶💞 Will you be mine
+          forever? Will you be father of my babies? 🌹💍❤️
+        </p>
+
+        <div class="final-heart">❤️💍🌹</div>
+      </div>
+
+      <img
+        class="gif"
+        src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif"
+        alt="Proposal gif"
+      />
+
+      <button onclick="nextPage(1)">Restart 🔁💖</button>
+      <div class="small">If you say yes… my world becomes complete 🥰</div>
+    </div>
+
+    <script>
+      function nextPage(pageNum) {
+        document.querySelectorAll(".page").forEach((page) => {
+          page.classList.remove("active");
+        });
+        document.getElementById("page" + pageNum).classList.add("active");
+      }
+
+      // Floating hearts generator
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+
+        const hearts = ["❤️", "💖", "💕", "💘", "💞", "💓", "🌹"];
+        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+        heart.style.fontSize = Math.random() * 18 + 18 + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }
+
+      setInterval(createHeart, 300);
+    </script>
+  </body>
+</html>
